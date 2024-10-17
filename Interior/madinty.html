@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madinty</title>
+    <link rel="stylesheet" href="../.Css/style.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo">
+            <!-- <img class="scale-with-grid" src="images/logo1.png" alt="logo"> -->
+          </div>
+        </a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#ourProjects" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Our Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../design.html">Design Project</a></li>
+                <li><a class="dropdown-item" href="../construction.html">Execution Projects</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+      <div class="pageTitle">
+          <h2 class="title mb-2"> Madinty </h2>
+      </div>
+      <header>
+          <div class="banner-ourProjects">
+              <img src="Images/LIVINGROOM  (2).jpg" alt="">
+          </div>
+      </header>
+  </div> <!-------- End Of Container --------->
+  <section class="media">
+    <div class="container">
+        <div class="filterBtn">
+            <button class="filter-button" onclick="filterMedia('all')">All</button>
+            <button class="filter-button" onclick="filterMedia('living Room')">living room</button>
+            <button class="filter-button" onclick="filterMedia('reciption')">reciption</button>
+            <button class="filter-button" onclick="filterMedia('master-bedroom')">master bedroom</button>
+            <button class="filter-button" onclick="filterMedia('boy-bedroom')">boy bedroom</button>
+            <button class="filter-button" onclick="filterMedia('kitchen')">kitchen</button>
+            <button class="filter-button" onclick="filterMedia('landscape-roof')">land scape & roof</button>
+            <button class="filter-button" onclick="filterMedia('video')">video</button>
+        </div><!---End Of filterBtn --->
+        <div class="mediaContainer">
+        </div>
+    </div><!-------- End Of Container --------->
+  </section> <!-------- End Of Media --------->
+  <script>
+  function filterMedia(category) {
+  const mediaItems = document.querySelectorAll('.media-item');
+  mediaItems.forEach(item => {
+      if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'inline-block'; 
+      } else {
+          item.style.display = 'none'; 
+      }
+    });
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+    // Array of media files with categories
+    const mediaFiles = [
+        
+        {type : 'image' , src : '1d4WoPJeZePUmUE0-2WFakMMHvTM_TPBn' , category : 'living Room'},
+        {type : 'image' , src : '1LMZv7o2nNX10Yh4LH3zG3iWrNkB0x-ZT' , category : 'living Room'},
+        {type : 'image' , src : '12LdhJQ6fq2HQikwVb0DJ4gz52Du9iVAF' , category : 'living Room'},
+    
+        {type : 'image' , src : '1PmnDsQxsy-xFx24SJe4hSkB-QVygs6_I' , category : 'reciption'},
+        {type : 'image' , src : '17pVHQ7OpZObuSqsRDt4Amxu-mZ_SqMm0' , category : 'reciption'},
+        {type : 'image' , src : '1WWE9fi9WNDmI3BujRHimjCql1pxY-6SO' , category : 'reciption'},
+        {type : 'image' , src : '1ST_HQwUaXGoFAOxA1r4z0tZk-WqtjfWj' , category : 'reciption'},
+        {type : 'image' , src : '1sFSbNPnIkD-mL74SwPpCZjrFWo2uDdHO' , category : 'reciption'},
+        {type : 'image' , src : '1MqYifg5fpWM0TXXd2I2vyZddT5SlrzoE' , category : 'reciption'},
+        {type : 'image' , src : '1UzaRhdpOHUN-_TZIpRb_kYlURBXWpVy6' , category : 'reciption'},
+        {type : 'image' , src : '173-kE0YMeyDvTVq2qsbnmBp07XR3gf5T' , category : 'reciption'},
+        {type : 'image' , src : '1rCKXBq6hlT3uBq1vSd2lrw1YwGj6SZe5' , category : 'reciption'},
+    
+        {type : 'image' , src : '1PUK5i6OnNGjvqlH0EAAOykg0ibGIOJg5' , category : 'kitchen'},
+        {type : 'image' , src : '1apKqX93JBuOub6EHxLZj8S5EXtz_hJhO' , category : 'kitchen'},
+        {type : 'image' , src : '1N6rIhRQveejitqf0KGS1B6aVB9XVeXs-' , category : 'kitchen'},
+    
+        {type : 'image' , src : '1iF1IexilmEOnHmBWRSg-Xmyok-l9XpJI' , category : 'master-bedroom'},
+        {type : 'image' , src : '1z-kbt7HbNQAYKbK46NijinrIspYOYcxw' , category : 'master-bedroom'},
+        {type : 'image' , src : '1hnkghS8iUeGB-T22z7GQWlNqBCM_Xjre' , category : 'master-bedroom'},
+        {type : 'image' , src : '1JLDiuhA0JQZqtuOLpdk9u9Is-ahyucjr' , category : 'master-bedroom'},
+        {type : 'image' , src : '13wgz51j6EVjqrjGOzUv4g4G8VOa4Stac' , category : 'master-bedroom'},
+        {type : 'image' , src : '1xh4LPdFRpCVL5mpA8uh2EaH1tFqrFJEZ' , category : 'master-bedroom'},
+        {type : 'image' , src : '148OXONkt-U3VIWJM27UBR93eukzWd2Sc' , category : 'master-bedroom'},
+    
+        {type : 'image' , src : '1-7e3u_9rT0Ibhg_S9psTu_oAfjJixrIF' , category : 'boy-bedroom'},
+        {type : 'image' , src : '1NKRdO42JIyj3t-mCZWFRgdkYGEy23Y_2'  , category : 'boy-bedroom'},
+        {type : 'image' , src : '11HMf-mHLhJFnegm0jcee1_oPMXFaPSvT' , category : 'boy-bedroom'},
+    
+        {type : 'image' , src : '1BnvGWyY7gpX2jYAsMd0H446mvdlLZ7K-' , category : 'landscape-roof'},
+        {type : 'image' , src : '17sxSfLrZbbDTcR0MeYTWdyTQYOFH3noE' , category : 'landscape-roof'},
+        {type : 'image' , src : '1YMrjrQmxLF6cfiLqlIvCxsUp0mk7LzxO' , category : 'landscape-roof'},
+        {type : 'image' , src : '1iyhyp5_ef7f3nLR9H_VtizNhgUDbFW7l' , category : 'landscape-roof'},
+        {type : 'image' , src : '1LFrHJd4NCLuvkbFnoGju2WJ7R4Zsb8JR' , category : 'landscape-roof'},
+        {type : 'image' , src : '1PD1HltxfmsZX4z-rYMjOAGpg1oi6aqkZ' , category : 'landscape-roof'},
+        {type : 'image' , src : '12CRdvPv2H9c60ABFTmMo6cpgcVfvvW2a' , category : 'landscape-roof'},
+        {type : 'image' , src : '1Fnx8K3miHU1f2Li5pX6w--_3ikFri96o' , category : 'landscape-roof'},
+        {type : 'image' , src : '1nERQSMz66CELymI3TgzSMi_IqmNVGL7i' , category : 'landscape-roof'},
+        {type : 'image' , src : '1af6outyDeX-_8SDxN51JH5szXoNqd4F6' , category : 'landscape-roof'},
+        {type : 'image' , src : '1quYxWBefX2MazO7XJsGHYx39-w4-4DXG' , category : 'landscape-roof'},
+        {type : 'image' , src : '1IjMPy-jsnzcgfznanb523CTuH1oGW9Bs' , category : 'landscape-roof'},
+        {type : 'image' , src : '1MZ1QENh3RDpJUJDjwA2HzAGs9e8PNynO' , category : 'landscape-roof'},
+        {type : 'image' , src : '1KPneHxRiaGjXeC4fUlThSMS5hKh47YFK' , category : 'landscape-roof'},
+        {type : 'image' , src : '1yRHBS-cpOGvFQk0UXq1oQHbAmWGo1gh4' , category : 'landscape-roof'},
+    
+      ];
+    const mediaContainer = document.querySelector('.mediaContainer');
+    // Loop through the media files and add them to the DOM
+    mediaFiles.forEach(media => {
+      let mediaElement;
+      
+      if (media.type === 'image') {
+        mediaElement = document.createElement('img');
+        // mediaElement.src = `https://drive.google.com/thumbnail?id=${media.src}`;
+        mediaElement.src = `https://drive.google.com/thumbnail?id=${media.src}&sz=w1000-h1000`;
+        mediaElement.loading = "lazy";
+
+      mediaElement.onclick = function() {
+        window.open(`https://drive.google.com/uc?export=view&id=${media.src}`, '_blank');
+      }; 
+
+      } else if (media.type === 'video') {
+        mediaElement = document.createElement('video');
+        mediaElement.controls = true;
+        mediaElement.src = "directLink";
+      }
+
+      const mediaItem = document.createElement('div');
+      mediaItem.classList.add('media-item');
+      mediaItem.setAttribute('data-category', media.category);
+      mediaItem.appendChild(mediaElement);
+      mediaContainer.appendChild(mediaItem);
+    });
+      // عرض جميع الوسائط عند تحميل الصفحة
+      filterMedia('all');
+  });
+  // Intersection Observer لتحميل الفيديوهات عند الحاجة
+  const videos = document.querySelectorAll('video');
+  const videoObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          const video = entry.target;
+          const source = video.querySelector('source');
+          source.src = video.getAttribute('data-src');
+          video.load(); // تحميل الفيديو عند الدخول في العرض
+          observer.unobserve(video); // التوقف عن المراقبة بعد التحميل
+      }
+    });
+  }, { threshold: 0.25 });
+  
+  videos.forEach(video => {
+      videoObserver.observe(video);
+  });
+
+  </script>
+  <script src="../JS/main.js"></script>
+  <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
