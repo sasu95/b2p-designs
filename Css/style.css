@@ -10,6 +10,9 @@ body,html{
 }
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1200px){
+        .logo-spinner {
+        width: 25% !important;
+    }
     .swiper-button-next,
     .swiper-button-prev {
         width: 50px;
