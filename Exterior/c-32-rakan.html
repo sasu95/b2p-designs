@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-32-Rakan</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontAwesome/all.min.css">
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <div class="logo">
+              <!-- <img class="scale-with-grid" src="images/logo1.png" alt="logo"> -->
+            </div>
+          </a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#ourProjects" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Our Projects
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../design.html">Design Project</a></li>
+                  <li><a class="dropdown-item" href="../construction.html">Execution Projects</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="pageTitle">
+            <h2 class="title mb-2"> Rakan Development </h2>
+        </div>
+        <header>
+            <div class="banner-ourProjects">
+                <img src="../Images/Interactive LightMix NIGHT 02.jpg" alt="">
+            </div>
+        </header>
+    </div> <!-------- End Of Container --------->
+    <section class="media">
+        <div class="container">
+            <div class="filterBtn">
+                <button class="filter-button" onclick="filterMedia('all')">All</button>
+                <button class="filter-button" onclick="filterMedia('day-mode')">day mode</button>
+                <button class="filter-button" onclick="filterMedia('night-mode')">night mode</button>
+            </div><!---End Of filterBtn --->
+            <div class="mediaContainer">
+            </div>
+        </div><!-------- End Of Container --------->
+    </section> <!-------- End Of c-32-rakan --------->
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            const mediaFiles = [
+                {type:'image' , src : '1jXyEpu1vBhceOq6VUx-iBhIoIYSnfFPU' , category: 'day-mode'},
+                {type:'image' , src : '1Z3K3AVtJBGQqy8YnpzMz1Jv8iYww7iQ6' , category: 'day-mode'},
+                {type:'image' , src : '1-Cs03L2Zb8MXzPo1BQQNHmtolh3RRAki' , category: 'day-mode'},
+                {type:'image' , src : '1IhFL4-SS_2zHmYQlAqEFE0uoVBv9XqZ6' , category: 'night-mode'},
+                {type:'image' , src : '1XQ7G41NEdX5O22Imxnv41AlGP-lqsC1f' , category: 'night-mode'},
+                {type:'image' , src : '1eKOYGMwYCI5Sld2lxXMGuKtTqqutwwa8' , category: 'night-mode'},
+            ];
+            let mediaContainer = document.querySelector('.mediaContainer');
+            mediaFiles.forEach(media => {
+                let mediaElement;
+                if(media.type === 'image'){
+                    mediaElement = document.createElement('img');
+                    mediaElement.src = `https://drive.google.com/thumbnail?id=${media.src}&sz=w1000-h1000`;
+                    mediaElement.loading = "lazy";
+                    mediaElement.onclick = function() {
+                    window.open(`https://drive.google.com/uc?export=view&id=${media.src}`, '_blank');
+                     };             
+                 }
+                 let mediaItem = document.createElement('div');
+                 mediaItem.classList.add('media-item');
+                 mediaItem.setAttribute('data-category', media.category);
+                 mediaItem.appendChild(mediaElement);
+                 mediaContainer.appendChild(mediaItem);
+            })
+            filterMedia('all');
+        });
+        function filterMedia(category){
+            const mediaItems = document.querySelectorAll('.media-item');
+            mediaItems.forEach(item => {
+                if( category === 'all' || item.getAttribute('data-category') == category){
+                    item.style.display= 'inline-block'; 
+                }else{
+                    item.style.display= 'none'; 
+                }
+            });
+        }
+    </script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
