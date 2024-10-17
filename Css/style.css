@@ -237,9 +237,9 @@ a.dropdown-item:before {
 .logo img {
     width: 85px;
 }
-.swiper-button-next, .swiper-button-prev {
+/* .swiper-button-next, .swiper-button-prev {
     display: none;
-}
+} */
 span.swiper-pagination-bullet.swiper-pagination-bullet {
     width: 20px;
     height: 20px;
