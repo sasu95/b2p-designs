@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madinaty (Project-2)</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <div class="logo">
+            <!-- <img class="scale-with-grid" src="images/logo1.png" alt="logo"> -->
+          </div>
+        </a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#ourProjects" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Our Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../design.html">Design Project</a></li>
+                <li><a class="dropdown-item" href="../construction.html">Execution Projects</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+      <div class="pageTitle">
+          <h2 class="title mb-2"> Madinaty (Project-2) </h2>
+      </div>
+      <header>
+          <div class="banner-ourProjects">
+              <img src="../Images/bg-madinty-2.jpg" alt="">
+          </div>
+      </header>
+  </div> <!-------- End Of Container --------->
+  <section class="media">
+    <div class="container">
+        <div class="filterBtn">
+            <button class="filter-button" onclick="filterMedia('all')">All</button>
+            <button class="filter-button" onclick="filterMedia('reciption')">reciption</button>
+            <button class="filter-button" onclick="filterMedia('living-room')">living room</button>
+            <button class="filter-button" onclick="filterMedia('kitchen')">kitchen</button>
+            <button class="filter-button" onclick="filterMedia('bedroom-1')">bedroom-1</button>
+            <button class="filter-button" onclick="filterMedia('bedroom-2')">bedroom-2</button>
+            <button class="filter-button" onclick="filterMedia('bedroom-3')">bedroom-3</button>
+            <button class="filter-button" onclick="filterMedia('bedroom-4')">bedroom-4</button>
+            <!-- <button class="filter-button" onclick="filterMedia('bathroom-1')">bathroom-1</button> -->
+        </div><!---End Of filterBtn --->
+        <div class="mediaContainer">
+        </div>
+    </div><!-------- End Of Container --------->
+  </section> <!-------- End Of Media --------->
+  <script>
+  function filterMedia(category) {
+  const mediaItems = document.querySelectorAll('.media-item');
+  mediaItems.forEach(item => {
+      if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'inline-block'; 
+      } else {
+          item.style.display = 'none'; 
+      }
+    });
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+    // Array of media files with categories
+    const mediaFiles = [
+        {type : 'image' , src : '1bTIUMbPRuwazlA_Q2aGQjKeDIBadsDLa' , category : 'reciption'},
+        {type : 'image' , src : '1aIDmuEkcVLiocoZoho7KZ_RudSf_QUf_' , category : 'reciption'},
+        {type : 'image' , src : '1unew0I4QlUkhFS9ckM15VWb2jpcxU7Wj' , category : 'reciption'},
+        {type : 'image' , src : '1VKAQpggVAy-8mg5zPArrq7QJCUKMMgXm' , category : 'reciption'},
+        {type : 'image' , src : '1_9-txxzWmqJhLm9n1szoX7jQiFzwqMMG' , category : 'reciption'},
+        {type : 'image' , src : '1YFzyaR_r1MbV9TF2LFF6-IyfKoH_4FjQ' , category : 'reciption'},
+        {type : 'image' , src : '1jzoHZyS0M9CTjwmEzOqRqjkmjrG-fLM2' , category : 'reciption'},
+        {type : 'image' , src : '1spM03AYIz1NLXhJiOX2pgu43KZQMg1Z0' , category : 'reciption'},
+        {type : 'image' , src : '1u5BJsRsPbya-Ei8r8J0du13tJwwcC7cP' , category : 'reciption'},
+        {type : 'image' , src : '1wT6EW-vq5nLn-2Mbwde6pBGGHDve8JVH' , category : 'reciption'},
+        {type : 'image' , src : '1ixmxcVKZZ0gmtzLmJq1PyQicMosQbr2j' , category : 'reciption'},
+        {type : 'image' , src : '14SeTYHW8GrifVqWCTv-okXwOoE85vEfP' , category : 'reciption'},
+        {type : 'image' , src : '1cJF74sDTGZUFma7j-eBqAGxPPKtKcuaP' , category : 'reciption'},
+        {type : 'image' , src : '1qDNQMArr9KmuQclA8qdGmbijbv7YJSGe' , category : 'reciption'},
+        {type : 'image' , src : '15zZzCPOix7mSEUfUzMbDqqsBEoGcghqE' , category : 'reciption'},
+        {type : 'image' , src : '1Id-FzV1g5dxRLYhFjqFqgEhzweRXZ7JG' , category : 'reciption'},
+
+        {type : 'image' , src : '1xluuWCyMUGinj0tchhTBZvYkAt7nJscF' , category : 'living-room'},
+        {type : 'image' , src : '1guw87qhAxvlMfxqI5ThX3qCi6vieSA0z' , category : 'living-room'},
+        {type : 'image' , src : '105VuvR-GFY2xFEp4ujZUYDRTgHfsUYyX' , category : 'living-room'},
+        {type : 'image' , src : '13wDINNZvly1HAhJeXie40oAIP3y2LcfH' , category : 'living-room'},
+        {type : 'image' , src : '1NdT5yudqJlodfIk2x_8LMWmbLezV4-82' , category : 'living-room'},
+        {type : 'image' , src : '136yFLTb1sH34yMpD-4kIOhmEBLUpNFG8' , category : 'living-room'},
+        {type : 'image' , src : '1ZVK3WlsAGRpsvkO8ciu5czzVYow-Uj4D' , category : 'living-room'},
+
+        {type : 'image' , src : '1_rgKK24jwLAUNnY4YwdMjeLhIV6njfx0' , category : 'kitchen'},
+        {type : 'image' , src : '1CmPa-hmjSGfAwhARopaGsTVuaFL2NPGN' , category : 'kitchen'},
+        {type : 'image' , src : '17uzLgawfP33_ktCvPicx2jzPgOlRLeOE' , category : 'kitchen'},
+        {type : 'image' , src : '107r_GRp9zlZHom5kHkcLUJlUSgMmkO-J' , category : 'kitchen'},
+        
+        {type : 'image' , src : '1YdVoFaCM8TISl4rCZH6KzG1NGvQp1jeh' , category : 'bedroom-1'},
+        {type : 'image' , src : '1wRwkc-KXuDxPZNoRoqZ-dCGJhGjd0AYV' , category : 'bedroom-1'},
+        {type : 'image' , src : '1OdpW2WICNeTvJ38HJFOY3e2wQt9G1vvA' , category : 'bedroom-1'},
+        {type : 'image' , src : '1E0xyWBKE7L5YC4Jtx74HIYIXTtff9tVK' , category : 'bedroom-1'},
+        {type : 'image' , src : '1LLiBbD4JPpxCNI4kycrCEwJU3e-zlzlr' , category : 'bedroom-1'},
+        {type : 'image' , src : '160U_b9hM0bNpGROX1pddWrwBEOFWy8eW' , category : 'bedroom-1'},
+        {type : 'image' , src : '1X0QIDST8yhuTnFA6Q775Gnln97jJD8xo' , category : 'bedroom-1'},
+        {type : 'image' , src : '1n-A2nSoLd35pHlReuGMgW1WoE2saeW0h' , category : 'bedroom-1'},
+        {type : 'image' , src : '1vqrYhoSU0juXXbI1yD4pz4ZcRGDIcUpL' , category : 'bedroom-1'},
+        {type : 'image' , src : '14T56VeqhLvFduTHOi_IyOX-eGb1mPXZU' , category : 'bedroom-1'},
+        {type : 'image' , src : '1yKW3BUtqP6ubKVKSbf1-d4_FAGCX8IOi' , category : 'bedroom-1'},
+        {type : 'image' , src : '1_gTDD431MpQF6e5SHjRLhziHb1L4asWp' , category : 'bedroom-1'},
+
+        {type : 'image' , src : '1KlcZlMIod6z9qJW0vhsf9-q6g3jqwbJ4' , category : 'bedroom-2'},
+        {type : 'image' , src : '12oPD-OHx66S1iOD_322vgBFwv8Hni6PG' , category : 'bedroom-2'},
+        {type : 'image' , src : '1uXB_KyenpH9bxxk7gbhxzyNsq_vrVmwj' , category : 'bedroom-2'},
+        {type : 'image' , src : '1sY4qB9cAn8AsgWgL5tSrTCLS2ztHsEA3' , category : 'bedroom-2'},
+        {type : 'image' , src : '1cFPOy06oe5uys_VD_CdWoW2zO5XwNBtY' , category : 'bedroom-2'},
+        {type : 'image' , src : '1hyt_j4izh2Tjyi-slVOuMhJDFKnpizP1' , category : 'bedroom-2'},
+
+        {type : 'image' , src : '18gHyvVRBNMy8Mw5hRX-OMrIv0A3iHCx1' , category : 'bedroom-3'},
+        {type : 'image' , src : '1xbQMeWPBRk32zVQbs60K7Omn17mOVJvp' , category : 'bedroom-3'},
+        {type : 'image' , src : '1xfoHAF48LcvhK7EPthoihK6GsaoUmGG-' , category : 'bedroom-3'},
+        {type : 'image' , src : '1KjnQL300bAXntrieRwrxUpVssEA71tpA' , category : 'bedroom-3'},
+        {type : 'image' , src : '1J7ZXYLwgoL7F38FA4vmtH0Ya9n4KuC_Y' , category : 'bedroom-3'},
+        {type : 'image' , src : '1Y-pt8J8P0mt8aRGryg345pojSF8dVRk3' , category : 'bedroom-3'},
+        {type : 'image' , src : '1PHNLMv4tWL08KK8ncRpgAZjivaTJGTAY' , category : 'bedroom-3'},
+        {type : 'image' , src : '1JiycximCn-PLmDhdnTTly4Sokf4IPYbU' , category : 'bedroom-3'},
+        {type : 'image' , src : '1OWmGMno93sfPFctDnnURt6og2qmaYplX' , category : 'bedroom-3'},
+
+        {type : 'image' , src : '1rcYiwwmiOPbETO0hW8ChuFZd2MHVSfLB' , category : 'bedroom-4'},
+        {type : 'image' , src : '11a_dWMCAu2OgT7S9pJBvUIXf8z5ToI3I' , category : 'bedroom-4'},
+        {type : 'image' , src : '15kIb9IKnEBo9Rhw-YqYTVlT3w56vg8mb' , category : 'bedroom-4'},
+        {type : 'image' , src : '1FkQlgqvoIyO6xZP-xVjKL56dvFfsJnaV' , category : 'bedroom-4'},
+        {type : 'image' , src : '1glWoiVtUFLinSCMYKXJZw7dpY3qUs9Qc' , category : 'bedroom-4'},
+        {type : 'image' , src : '1ZQvOHWDiv80DX5K6Z4CZARLrZLOm03Vp' , category : 'bedroom-4'},
+        {type : 'image' , src : '12wFFNIAIzOTlzn-LOqr4GWzP1lYPRQYz' , category : 'bedroom-4'},
+        {type : 'image' , src : '1f6YuxAeDKjx5DhzCkIqTnSKiXrx0cHIA' , category : 'bedroom-4'},
+        {type : 'image' , src : '1RlrC9wqGZnUTBOViMoLUzyJh1ixtQgqN' , category : 'bedroom-4'},
+
+      ];
+      let mediaContainer = document.querySelector('.mediaContainer');
+        mediaFiles.forEach(media => {
+          let mediaElement;
+          if( media.type === 'image'){
+            mediaElement = document.createElement('img');
+            mediaElement.src = `https://drive.google.com/thumbnail?id=${media.src}&sz=w1000-h1000`;
+            mediaElement.loading = 'lazy';
+            mediaElement.onclick = function(){
+              window.open(`https://drive.google.com/uc?export=view&id=${media.src}`, '_blank');
+            }
+          }
+          let mediaItem = document.createElement('div');
+          mediaItem.classList.add('media-item');
+          mediaItem.setAttribute('data-category', media.category);
+          mediaItem.appendChild(mediaElement);
+          mediaContainer.appendChild(mediaItem);
+        })
+        filterMedia('all');
+      });
+
+      function filterMedia(category){
+        const mediaItems = document.querySelectorAll('.media-item');
+        mediaItems.forEach(item => {
+          if( category === 'all' || item.getAttribute('data-category') == category){
+            item.style.display= 'inline-block'; 
+          }else{
+            item.style.display= 'none'; 
+          }
+        });
+      }
+  </script>
+  <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
