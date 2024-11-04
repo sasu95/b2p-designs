@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madinty</title>
-    <link rel="stylesheet" href="../.Css/style.css">
+    <title>Madinaty</title>
+    <link rel="stylesheet" href="../Css/style.css">
     <link rel="stylesheet" href="../Css/bootstrap.min.css">
 </head>
 <body>
@@ -39,11 +39,11 @@
     </nav>
   <div class="container">
       <div class="pageTitle">
-          <h2 class="title mb-2"> Madinty </h2>
+          <h2 class="title mb-2"> Madinaty </h2>
       </div>
       <header>
           <div class="banner-ourProjects">
-              <img src="Images/LIVINGROOM  (2).jpg" alt="">
+              <img src="../Images/madinaty-bg.jpg" alt="">
           </div>
       </header>
   </div> <!-------- End Of Container --------->
@@ -57,7 +57,6 @@
             <button class="filter-button" onclick="filterMedia('boy-bedroom')">boy bedroom</button>
             <button class="filter-button" onclick="filterMedia('kitchen')">kitchen</button>
             <button class="filter-button" onclick="filterMedia('landscape-roof')">land scape & roof</button>
-            <button class="filter-button" onclick="filterMedia('video')">video</button>
         </div><!---End Of filterBtn --->
         <div class="mediaContainer">
         </div>
@@ -152,7 +151,6 @@
       mediaItem.appendChild(mediaElement);
       mediaContainer.appendChild(mediaItem);
     });
-      // عرض جميع الوسائط عند تحميل الصفحة
       filterMedia('all');
   });
   // Intersection Observer لتحميل الفيديوهات عند الحاجة
@@ -163,8 +161,8 @@
           const video = entry.target;
           const source = video.querySelector('source');
           source.src = video.getAttribute('data-src');
-          video.load(); // تحميل الفيديو عند الدخول في العرض
-          observer.unobserve(video); // التوقف عن المراقبة بعد التحميل
+          video.load(); 
+          observer.unobserve(video); 
       }
     });
   }, { threshold: 0.25 });
