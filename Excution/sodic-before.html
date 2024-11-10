@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodic EastTown Duplex</title>
+    <link rel="icon" href="../Images/logo.png">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <div class="logo">
+            <!-- <img class="scale-with-grid" src="images/logo1.png" alt="logo"> -->
+          </div>
+        </a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#ourProjects" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Our Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../design.html">Design Project</a></li>
+                <li><a class="dropdown-item" href="../construction.html">Execution Projects</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+      <div class="pageTitle">
+          <h2 class="title mb-2">Sodic EastTown Duplex</h2>
+      </div>
+      <header>
+          <div class="banner-ourProjects">
+              <img src="../Images/bg-sodic.jpg" alt="sodic-bg">
+          </div>
+      </header>
+  </div> <!-------- End Of Container --------->
+  <section class="media">
+    <div class="container">
+        <div class="filterBtn">
+            <button class="filter-button" onclick="filterMedia('all')">All</button>
+            <button class="filter-button" onclick="filterMedia('before')">before</button>
+            <button class="filter-button" onclick="filterMedia('after')">after</button>
+            <button class="filter-button" onclick="filterMedia('during')">during</button>
+            <button class="filter-button" onclick="filterMedia('before-after')">before & after</button>
+            <button class="filter-button" onclick="filterMedia('video')">video</button>
+        </div>
+        <div class="mediaContainer">
+        </div>
+    </div><!-------- End Of Container --------->
+  </section> <!-------- End Of Media --------->
+  <script>
+  function filterMedia(category) {
+  const mediaItems = document.querySelectorAll('.media-item');
+  mediaItems.forEach(item => {
+      if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'inline-block'; 
+      } else {
+          item.style.display = 'none'; 
+      }
+    });
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+    // Array of media files with categories
+    const mediaFiles = [
+        {type : 'image' , src : '1dgQfi11iPMrojjLBNPzDkh9aMdrHm7tV' , category : 'after'},
+        {type : 'image' , src : '17tJEeMdasYCMEZI-iDkPpnuILB5xv2Jf' , category : 'after'},
+        {type : 'image' , src : '1hu0TZeyVpDgFkhd-b9IYTzeESFYo5yxH' , category : 'after'},
+        {type : 'image' , src : '1pzqfbT5FKShcS9P3l6ZoQoFZlTLkefgm' , category : 'after'},
+        {type : 'image' , src : '1LrcqDJyM1_4j96jS_USHTEZFmT9OaGld' , category : 'after'},
+        {type : 'image' , src : '12s88nlJ-p-QZtZ9DQtoAvOvu2cA_KFbP' , category : 'after'},
+        {type : 'image' , src : '1pBM7VvtfAC1oJJcKyviQR94AzWFGSQWN' , category : 'after'},
+        {type : 'image' , src : '1urVnK__Jq9aRm4ZUgINeeGvr6eCH5NoW' , category : 'after'},
+        {type : 'image' , src : '18LcsljLpIBh0q61kazVq7jGUI-Fj1jyp' , category : 'after'},
+        {type : 'image' , src : '1c942O1pkRPTbgvbPetiJTCNOiIeG0pJ8' , category : 'after'},
+        {type : 'image' , src : '1ftqNUSaJxjUB7he2Vo068W3K5wTrNJNB' , category : 'after'},
+        {type : 'image' , src : '1Dn5XJA1VvghRVRM5YmckRZTGa-0FB5eJ' , category : 'after'},
+        {type : 'image' , src : '1kXTqHUwggpVYx_8UCezUb3DeBTXPYYBX' , category : 'after'},
+        {type : 'image' , src : '1MAi1vpeNgm0KJpM33w00r8ld5NJ-7U0c' , category : 'after'},
+        {type : 'image' , src : '1HCsQVnSNzHS_RrOgDeNocING_pwdo9Ic' , category : 'after'},
+        {type : 'image' , src : '1rH_oNvMPdWFNBBqnV6duoQsZvqQeSui2' , category : 'after'},
+        {type : 'image' , src : '18in_ImM5i99VotPs2I3wqB6-C0sW3zDb' , category : 'after'},
+        {type : 'image' , src : '1pgrtfMOh671-7loiu9FzWdySHV9j9z3k' , category : 'after'},
+        {type : 'image' , src : '180_W4uUx_lZ0ZR2_pRpbS8ma-WiSCJXQ' , category : 'after'},
+        {type : 'image' , src : '1FK2Vq5CvbYOZT_96VK-EOq568kvCwS9a' , category : 'after'},
+        {type : 'image' , src : '1LJYzbjZ1fRW5qaVaBmIq7Ze__sQc0uRy' , category : 'after'},
+        {type : 'image' , src : '1agh426rMiG8Sl0pH2ddoXzos9cy5TTz2' , category : 'after'},
+        {type : 'image' , src : '1cptC_XPxvC9bLXvH4T5cOEFvIg_pSnZd' , category : 'after'},
+        {type : 'image' , src : '1JpAXZ5UspUdhKD-_4Nk1GBAUdTu8AOgx' , category : 'after'},
+        {type : 'image' , src : '1PwRlv1jBg7lACJWl1GfLAnT2TZCNoKQi' , category : 'after'},
+        {type : 'image' , src : '1fPzZFBpzNXSHs_scsCoI8zQcpmWgYjmM' , category : 'after'},
+        {type : 'image' , src : '1ww3YPIKRsijAF61nfHqDWFKHHu1i301Q' , category : 'after'},
+        {type : 'image' , src : '1ivMzHFSX25ybLUlOs8W9wMiJZRFfVtyL' , category : 'after'},
+        {type : 'image' , src : '13gJTDFGCG-x9w_xHCh2QX6VaKxt6eM6-' , category : 'after'},
+
+        {type : 'image' , src : '1Eax5dsiZt68ciNB3xgwM8UHMgeC18AN-' , category : 'after'},
+        {type : 'image' , src : '18QckoP3opJu5egdt2oi4__0_fNk6Eh0c' , category : 'after'},
+        {type : 'image' , src : '16z_CIBRrlRa8Ys-gaaLC8orwh2UujzCJ' , category : 'after'},
+        {type : 'image' , src : '1pO3siSNSG1I_mZ5XdaNy2iWI-lgtAK2Y' , category : 'after'},
+        {type : 'image' , src : '1_cP5jaN1f-7wphtzEwQyD6JKrk4APPdS' , category : 'after'},
+        {type : 'image' , src : '1ASfEE44yewlDHjvzfLVHpLyAyXDyl89e' , category : 'after'},
+        {type : 'image' , src : '1ehHQ8oIwl-Vr4jk5OiE_naV7drziTbmB' , category : 'after'},
+        {type : 'image' , src : '1OKDvtgna9UivBjsQzOpXD1Bz173QqwyI' , category : 'after'},
+        {type : 'image' , src : '1McW18kH1d8mG6C5x5MRBpSyrTrZFahfH' , category : 'after'},
+        {type : 'image' , src : '1razlrCyGfYSC9Qx70n6gXLyGhC79AfdB' , category : 'after'},
+        {type : 'image' , src : '1l4TUDTtR1LbH0G3XWksnagbgpzUuT51j' , category : 'after'},
+        {type : 'image' , src : '1WgkrNlQOgpWyjmTnc4wClYNSGa9S99Wr' , category : 'after'},
+        {type : 'image' , src : '1zNkF2YAExI0xEfhxojxGCXh1Yd47dRWO' , category : 'after'},
+        {type : 'image' , src : '1EIRYaJsawYoSubA9EAxCeWDn1ejPXC-B' , category : 'after'},
+        {type : 'image' , src : '1YrENjx75XuL6W_eMZmcl6wrwzaFrWFSp' , category : 'after'},
+        {type : 'image' , src : '1E0P2VOvUTJEdKZjbZZgvRrWlN4U2kj1f' , category : 'after'},
+        {type : 'image' , src : '127-WZxiPsWSaBfVhrXQcyf_z98NgLOTY' , category : 'after'},
+  
+        {type : 'image' , src : '1YW5gtToSWTipyW0UNx9ynt2HqOoQGFuT' , category : 'after'},
+        {type : 'image' , src : '1fno5ClVME-jajmyyAhqYqCZvEMYJzJlh' , category : 'after'},
+        {type : 'image' , src : '1MwS5qcLCshvc5sXV6aY0Jd1nzHqEIJLq' , category : 'after'},
+        {type : 'image' , src : '12APy2LkjOw4KLjPMYxo4tk18Mxw-6ZOC' , category : 'after'},
+        {type : 'image' , src : '1bIJR9mcq6entJijHxXazHDi2dGks94o-' , category : 'after'},
+        {type : 'image' , src : '1_k6XWUqiGf13aZCAeLSzjCQtf4xFonwK' , category : 'after'},
+        {type : 'image' , src : '172ff3CfkGrOKFmdLkr0d7vbAIhgM_rkv' , category : 'after'},
+        {type : 'image' , src : '1lC2KbD4_1A8Al2TaRSjDGMkVQpsR16C2' , category : 'after'},
+        {type : 'image' , src : '1CKtzXtBRpbL2IZQUDx2-aGV3LcWX_dI0' , category : 'after'},
+        {type : 'image' , src : '1LOG1ezk6YfWR9S_r7esIjE4Y7lZ4dWcV' , category : 'after'},
+        {type : 'image' , src : '1pBlnQdKCo0-DjHqdKAosSDiTz76wBD84' , category : 'after'},
+        {type : 'image' , src : '15FeLOF_P47uiYOni1FG7VlGC55bdTpgm' , category : 'after'},
+        {type : 'image' , src : '1geRdCIGV1sJ91zNTmSgvSQf19RE9uU02' , category : 'after'},
+        {type : 'image' , src : '18KQE6PulkthhiI4R8Awlcmnc1GaBfYZu' , category : 'after'},
+        {type : 'image' , src : '1rOwRlhXp8Gn2iDn4__gw_Kan4gf53Yax' , category : 'after'},
+        {type : 'image' , src : '1jwk9J1oeWtuMQVS-DD-WR34pSKwGylXA' , category : 'after'},
+        {type : 'image' , src : '17O6EIeyoQ21QnIPsfHuJOzx5uBHjH0K6' , category : 'after'},
+        {type : 'image' , src : '1_cP5jaN1f-7wphtzEwQyD6JKrk4APPdS' , category : 'after'},
+        {type : 'image' , src : '13QIR5DMwNs0_gFhTCFIx3TcbQc4OYuuP' , category : 'after'},
+        {type : 'image' , src : '1T5qwT3HNBTXxLlXunoWBcHu-1f3h4IFy' , category : 'after'},
+        {type : 'image' , src : '1RnREJFyvoprxyIn9l7QtMfQrtX4m5LPk' , category : 'after'},
+        {type : 'image' , src : '1qFEXBAlsnbxJeqA8mEh1PiWPX87qwl-N' , category : 'after'},
+        {type : 'image' , src : '1_cP5jaN1f-7wphtzEwQyD6JKrk4APPdS' , category : 'after'},
+        {type : 'image' , src : '1_cP5jaN1f-7wphtzEwQyD6JKrk4APPdS' , category : 'after'},
+        {type : 'image' , src : '1_cP5jaN1f-7wphtzEwQyD6JKrk4APPdS' , category : 'after'},
+        
+        {type : 'image' , src : '12WsVmJ8ocT1ksPvssKG_Wi0IRqgPW-fH' , category : 'after'},
+        {type : 'image' , src : '116jaa7QVdtcsNECwQL7Ew3uV0RCIYmvU' , category : 'after'},
+        {type : 'image' , src : '1dXwCkVgrYPtpJOKNLotgj-USF383yv1X' , category : 'after'},
+        {type : 'image' , src : '1E-SrZCXBLiUUJ8PyO6TeIj0TjgSeOMbx' , category : 'after'},
+        {type : 'image' , src : '10RfDiLSvaXJHShv0j8vcxgjUfBNM5SGO' , category : 'after'},
+        {type : 'image' , src : '1_TliADWNl5J9T9Kv2aCNff94Rv1uHo-A' , category : 'after'},
+        {type : 'image' , src : '1Hx0CVs5UT3PXDSZdR2gX4HRY4YEmGDWK' , category : 'after'},
+        {type : 'image' , src : '1MyldZ2lRqUnYlQ03aDlbcLs_u9QfyFML' , category : 'after'},
+        {type : 'image' , src : '1rF0bJyD-DQgEBCadJhPflQlQ4AggN96i' , category : 'after'},
+        {type : 'image' , src : '1U82ONJ0Q88YabFDx9lan3Kvg5NU1NNeb' , category : 'after'},
+        {type : 'image' , src : '1YhOnuOvZTGf-laB0KUmx3HB_ik0OHmiD' , category : 'after'},
+        {type : 'image' , src : '1YaMDFNiEc_2olaPo7mTw8yVWVq9VJXds' , category : 'after'},
+        {type : 'image' , src : '1aRS0DhdRxwuC2pI7m96P5P3XXjT-lRW1' , category : 'after'},
+        {type : 'image' , src : '1Dsg11dCZu513FdmeV_znUp8fbqzkP3cg' , category : 'after'},
+        {type : 'image' , src : '13GSDQZ1r6xNrd1bHv6hHvYD877MZnWfB' , category : 'after'},
+
+        {type : 'image' , src : '12z2A7IKGVJt9tGpcTjezOQsunjwglsU7' , category : 'after'},
+        {type : 'image' , src : '1V2A7WDQv6w3GnhQNmFONX5XZwWZycSk-' , category : 'after'},
+        {type : 'image' , src : '1i-RAXFcpZcxMUnJbPqlG3xJNTFsnSQpI' , category : 'after'},
+        {type : 'image' , src : '1ftqFfrdzCu5r0LxGxcf3tVUrMwk6yaU9' , category : 'after'},
+        {type : 'image' , src : '19OrPLxopkIrGxBJUVXQESCtXNXIwY8XS' , category : 'after'},
+        {type : 'image' , src : '1t41ciJ60IA44hyOPY4Kg5xlJNLvsq3Bp' , category : 'after'},
+
+        {type : 'image' , src : '1uJvLlMUYU_JahuuyZouhhNbICJnSzfWT' , category : 'after'},
+        {type : 'image' , src : '1EAz-AimJDcM9Pt1KyQC37QrX8KGzPR_L' , category : 'after'},
+        {type : 'image' , src : '1VfSQiVbCfU8yH_8CNt47xu1-VDhOir0x' , category : 'after'},
+        {type : 'image' , src : '1t41ciJ60IA44hyOPY4Kg5xlJNLvsq3Bp' , category : 'after'},
+        {type : 'image' , src : '1iGpdLjXhFqfWzosxKSrj2T-5sWSAQqzk' , category : 'after'},
+        {type : 'image' , src : '1LNaCmqk1Yu5SHDHsbYp6_oQvSc5tyGeF' , category : 'after'},
+        {type : 'image' , src : '1GvlihG8Vzco9TmRI90sCPvgngPtcyB__' , category : 'after'},
+        {type : 'image' , src : '1-mCUZMvdCwdGx7ANwbYqQpHblPruxne_' , category : 'after'},
+        {type : 'image' , src : '1HABT8z2GwPPseN9h3srzMZqp4fRYxKtW' , category : 'after'},
+        {type : 'image' , src : '1TBv8yx5yOjYHrPCWROz1MmfPGAD0x24t' , category : 'after'},
+        {type : 'image' , src : '1oNkJJLSJ1_UKqD6G1jYE_jYqmlSPoHr7' , category : 'after'},
+        {type : 'image' , src : '1go0avWLzpt40ziHmXfvQpo7PFH8PUc5x' , category : 'after'},
+        {type : 'image' , src : '1JK2OJE8tgiVlr_AInLXOH8J5G72fsSAL' , category : 'after'},
+        {type : 'image' , src : '14_Qcm4ZGkYDbS2c2pj-0IpisBwrSqMy5' , category : 'after'},
+        {type : 'image' , src : '1G7rVJCY1iiTueLpJK11yZLDK3xHGuOOf' , category : 'after'},
+        {type : 'image' , src : '17Apv788w8SjJCDtpFzAJV1ScZATArv77' , category : 'after'},
+        {type : 'image' , src : '1_0rZo-w5qUBvOIV94XeCacWuDaBn8vof' , category : 'after'},
+        {type : 'image' , src : '1ZMWHxYbIV_FBiN95v1GEs6WftrWgfaus' , category : 'after'},
+        {type : 'image' , src : '1grJrMeKk42AoqQxe5wRqP0STjLepoubU' , category : 'after'},
+        {type : 'image' , src : '1wAoJBlN_wTAtHoqqgjsg3GGHaVlsveQx' , category : 'after'},
+
+        {type : 'image' , src : '11wWnHJhIjoxFFRMf7CYDwGF4NwYTzCgN' , category : 'after'},
+        {type : 'image' , src : '1t5u6XzvkG1bBXQN4pJq-iaovGVO-1t2a' , category : 'after'},
+        {type : 'image' , src : '1OtJYbpjA-zEi4i63UMgRC5YoipRC0oTu' , category : 'after'},
+        {type : 'image' , src : '1-7L9Nv22YXyUBrtgpdyWHohCphGheWhM' , category : 'after'},
+        {type : 'image' , src : '1y8eVmdMvJU9PXLqzIRtZ90DiydYUlumR' , category : 'after'},
+        {type : 'image' , src : '1dflzt4ey71XldcHMDTEGHL8VFSNFWdym' , category : 'after'},
+
+
+
+
+
+
+
+
+
+
+        {type : 'video' , src : '1iWkqOBXe8d0lOZ2Bq-K0Z7ufnkqe-640' , category : 'video'},
+
+
+
+
+
+      ];
+      let mediaContainer = document.querySelector('.mediaContainer');
+        mediaFiles.forEach(media => {
+          let mediaElement;
+          if( media.type === 'image'){
+            mediaElement = document.createElement('img');
+            mediaElement.src = `https://drive.google.com/thumbnail?id=${media.src}&sz=w1000-h1000`;
+            mediaElement.loading = 'lazy';
+            mediaElement.onclick = function(){
+              window.open(`https://drive.google.com/uc?export=view&id=${media.src}`, '_blank');
+            }
+          }else if (media.type === 'video') {
+            mediaElement = document.createElement('iframe');
+            mediaElement.width = '100%';
+            mediaElement.height = '500';
+            mediaElement.src = `https://drive.google.com/file/d/${media.src}/preview`;
+            mediaElement.allow = 'autoplay';
+            mediaElement.setAttribute('allowfullscreen', 'true');
+            mediaElement.onclick = function(){
+              window.open(`https://drive.google.com/file/d/${media.src}/view`, '_blank');
+              }
+
+          }
+
+          let mediaItem = document.createElement('div');
+          mediaItem.classList.add('media-item');
+          mediaItem.setAttribute('data-category', media.category);
+          mediaItem.appendChild(mediaElement);
+          mediaContainer.appendChild(mediaItem);
+        })
+        filterMedia('all');
+      });
+  </script>
+  <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
