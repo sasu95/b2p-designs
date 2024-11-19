@@ -55,7 +55,7 @@
             <button class="filter-button" onclick="filterMedia('before')">before</button>
             <button class="filter-button" onclick="filterMedia('after')">after</button>
             <button class="filter-button" onclick="filterMedia('during')">during</button>
-            <button class="filter-button" onclick="filterMedia('before-after')">before & after</button>
+            <button class="filter-button" onclick="filterMedia('design-reality')">design & reality</button>
             <button class="filter-button" onclick="filterMedia('video')">video</button>
         </div>
         <div class="mediaContainer">
@@ -76,12 +76,96 @@
     document.addEventListener("DOMContentLoaded", function(){
     // Array of media files with categories
     const mediaFiles = [
-        {type : 'image' , src : '1-qqdGAnXl6VhlJfV6Lbwfiq_0ylklKvc' , category : 'after'},
-        {type : 'image' , src : '1t3mSzFPFRCjFXeK7NgZzoz75AAaJdqYx' , category : 'after'},
-        {type : 'image' , src : '1vWRoYF4vRBxHzVsoZMR9H3rBO3cr5aDq' , category : 'after'},
-        {type : 'image' , src : '1F_yyujV212wvZW4WWjeDESnDUjGYLD_a' , category : 'after'},
+        {type : 'image' , src : '1wvauPgCvlpRl_diljTkBAtu2WCfKro0q' , category : 'after'},
+        {type : 'image' , src : '1LmNt5PxI3zvjZe7jPDhzrYWnvI3soEwn' , category : 'after'},
+        {type : 'image' , src : '1wSwB6QLOHO4jr6T0H5vAiEIWSf-aN6eW' , category : 'after'},
+        {type : 'image' , src : '1njGBrjx_LkWqvoS6WlpAI5u6ZRM46f1l' , category : 'after'},
+        {type : 'image' , src : '16VyvgVn4ndG0IPdBZCntDRBBIXQsQdIk' , category : 'after'},
+        {type : 'image' , src : '1TaROsLtggFFiqmP4RVm19cz-dZXMWZH5' , category : 'after'},
 
-        {type : 'video' , src : '1iWkqOBXe8d0lOZ2Bq-K0Z7ufnkqe-640' , category : 'video'},
+        {type : 'image' , src : '1bBLR7owl8v0qvescIbA-2pn68dfxYwjC' , category : 'after'},
+        {type : 'image' , src : '1rWU4HhzxFWFUg7ye9ZlHQNR7Zx2c2zPT' , category : 'after'},
+        {type : 'image' , src : '1hZCh7HHD4nGWKJOl-UoO6K-W2cNYE7Er' , category : 'after'},
+        {type : 'image' , src : '19TtIqO_BAYXO3GTiQWYa3kEE3MZuRM9-' , category : 'after'},
+        {type : 'image' , src : '1h3y3TOE6lGo5wfv05757Y3DilJeD5_x5' , category : 'after'},
+        {type : 'image' , src : '1yPotn4_Eqf1swWuN1Gqestm3kL0ZAZaB' , category : 'after'},
+        {type : 'image' , src : '1DUaJJVnr7rNKwidnVDkuNpWjnxj8ZCau' , category : 'after'},
+        {type : 'image' , src : '1RSzOJdK9-8sBOqU32Fza3zMnhBDy23es' , category : 'after'},
+        {type : 'image' , src : '1CDzdNs7ITA0pzZQjOCaGIi_64p7GyyX3' , category : 'after'},
+        {type : 'image' , src : '1BDpDxrgiTLhvuHeyEf6NrmcuDAYmu23F' , category : 'after'},
+        {type : 'image' , src : '1zZhuvnUiysKBMCXIyY9eEFgH7BzrjBDg' , category : 'after'},
+        {type : 'image' , src : '1uqu2SASgDekDDHiISCrO5Sb8w2iyGTKd' , category : 'after'},
+        {type : 'image' , src : '1A4wJBTDrwmntDHbPAp8JdkzgA6qZvDrq' , category : 'after'},
+        {type : 'image' , src : '1X08PSVB7e8By50JiOuUKw9s86R-xNvEB' , category : 'after'},
+
+        {type : 'image' , src : '1kuzqw-Q5yR6eGoOXKhktapKvjRKQA0qJ' , category : 'after'},
+        {type : 'image' , src : '1oj1r--VX7VwdrCs4a0cwPyNvmJeu5EO0' , category : 'after'},
+        {type : 'image' , src : '1JiIr5N40TO8iZ5qpUuwhfc7jUxceCGgw' , category : 'after'},
+        {type : 'image' , src : '1J2i_chAL88OxuH9WwMGoha7oyHSVW64i' , category : 'after'},
+        {type : 'image' , src : '1aH1JHoXMjuuIkrQpmF8ZUGUl54aRKoC2' , category : 'after'},
+        {type : 'image' , src : '1s5ny16D8lGbAaI5cehBPYquutRsEg_fW' , category : 'after'},
+        {type : 'image' , src : '1itNZm3CLqpVcZlZE4E06XBvweQbe9RL-' , category : 'after'},
+        {type : 'image' , src : '1vtuPmkfzMqSdUxzSugomMxDGG2xQK1Sr' , category : 'after'},
+        {type : 'image' , src : '1Wpw5y8MwdPezhSdP6gzd-4CvA0zy9Awv' , category : 'after'},
+        {type : 'image' , src : '1eMSVmUWZs0rZ8_GnfpGmh_BPKy8c9ZLF' , category : 'after'},
+        {type : 'image' , src : '1XoxpoOqpGx_j5o-zqboHH_Io-XcFACf1' , category : 'after'},
+        {type : 'image' , src : '18K-L_JmYJLVWBoCgfktngvAR0MEqt0nB' , category : 'after'},
+        {type : 'image' , src : '1x14RC7PUEvipms6xz68sx_NHUzMYE_D2' , category : 'after'},
+        {type : 'image' , src : '169Niq4GoB13CtVJgR52C9pngdEYfOWw1' , category : 'after'},
+        {type : 'image' , src : '18K-L_JmYJLVWBoCgfktngvAR0MEqt0nB' , category : 'after'},
+        {type : 'image' , src : '12znV9xi33AlnBrUP00owWPiCsJy8KuWL' , category : 'after'},
+        {type : 'image' , src : '1aowIcNK0G1s9PVzUdPsYVbRRWHA1xoWR' , category : 'after'},
+        {type : 'image' , src : '1q13dCrBk3opiFwX_CI3TskXNfroKs0C_' , category : 'after'},
+        {type : 'image' , src : '1MzvB-7ivDfwstb3uYa9W57VJzTzy2Vz1' , category : 'after'},
+        {type : 'image' , src : '1_kXY5RgmK-B1tEpO4hp0WJdRtT_cTSNO' , category : 'after'},
+        {type : 'image' , src : '1_8M-9OQA49nzIzvn_gMBIWkWhZANWl1R' , category : 'after'},
+        {type : 'image' , src : '1moQJvDSwBSfiUOHpvkDkzXxjWCzyuzmM' , category : 'after'},
+        {type : 'image' , src : '1APioMgRuGLQUMWmAUDSBmbvVWnYjcc5k' , category : 'after'},
+        {type : 'image' , src : '1jDoWmpAeU1LthxDFjrJ9l7L83jUGLoYu' , category : 'after'},
+        {type : 'image' , src : '1r7c-fqqUGZdbpT0TsJuHw9uDxlZw28yg' , category : 'after'},
+        {type : 'image' , src : '1b2a6fnRjdEMk7pzMrGCc6L_nOvMZds_5' , category : 'after'},
+        {type : 'image' , src : '1Htw9j8F6SUJXB2gJ4F-N_En5HuiJzgz6' , category : 'after'},
+        {type : 'image' , src : '1zKxEYKGiInLSaOYKsTcisHfybpfJ8K78' , category : 'after'},
+        {type : 'image' , src : '1tdF1RO1sz600GoK7G8YLia4vTn5o4xMz' , category : 'after'},
+        {type : 'image' , src : '1r7c-fqqUGZdbpT0TsJuHw9uDxlZw28yg' , category : 'after'},
+        {type : 'image' , src : '1NLM2lFEFQJeCNTZTxNIMBtzAYsHSpMJt' , category : 'after'},
+        {type : 'image' , src : '1qQL8i8n8KyDloz5x7bmL6-stQOrxjiXt' , category : 'after'},
+        {type : 'image' , src : '14bPJnRwO4KCnJ57rtm2zIj8_SP5aG2vl' , category : 'after'},
+        {type : 'image' , src : '1P_E1wBg7Cdu8RQwl8wRRPztWN9jvkfQE' , category : 'after'},
+        {type : 'image' , src : '1ZdAZaRzlb7QUfdL4HZI_wCrH1NSxa5F9' , category : 'after'},
+        {type : 'image' , src : '1DStRNowT231i40pmfPQSxDGyh_KNmSZP' , category : 'after'},
+
+        {type : 'image' , src : '1W_YimfdJ9lotInmQDnlEc9zzUq6lEwFZ' , category : 'after'},
+        {type : 'image' , src : '1gCBq25km_lmPSlRRqJgSVwxNuiw6LfBX' , category : 'after'},
+        {type : 'image' , src : '1lssP-eRVPrIbE6veAp_RLBmI3Xz-fLYI' , category : 'after'},
+        {type : 'image' , src : '1zoEP8qbORwPkULoZeVYSFwocdHXeuyrp' , category : 'after'},
+        {type : 'image' , src : '1AhjPH3CYIMXSJkK--Lvp3Kqj9-vhKaMy' , category : 'after'},
+        {type : 'image' , src : '147YA-Hv0_cC9xBy2aUiUOXtwd58Vzkq0' , category : 'after'},
+        {type : 'image' , src : '1tqPDdLDNliFni8RHWvDlEbwwa5DuKlv_' , category : 'after'},
+        {type : 'image' , src : '1m2QF5AGiULKIxkffBkKDlRrsuadlWdl8' , category : 'after'},
+        {type : 'image' , src : '1223VU4lUHpY4VC4wZtL7FfAPZHgIwbeY' , category : 'after'},
+        {type : 'image' , src : '1uuJPHlWdQmUwllnxH_yOJrY8b_2D1_II' , category : 'after'},
+        {type : 'image' , src : '1gfEugbcPYe-VscMY48scT2dYXf0kWTIl' , category : 'after'},
+
+        {type : 'image' , src : '1JDitdE1olHCk7-KPrabJmaIgaavliXug' , category : 'design-reality'},
+        {type : 'image' , src : '1ql2QyPN8KIGNRYKR62cIa6c3mbK62Wku' , category : 'design-reality'},
+        {type : 'image' , src : '1YxPjCBMAxDH_6d79Jc6IHuW2pC6hYq9I' , category : 'design-reality'},
+        {type : 'image' , src : '16gAAhhKQB6aXbiY-ziEDrf6BCW2jrSbU' , category : 'design-reality'},
+        {type : 'image' , src : '1vzFJIve4bGXCBjcQS8hxAwy1G6EZ2gjz' , category : 'design-reality'},
+        {type : 'image' , src : '1cxePtTr8QlYRkX2nmXfI-UvmUVepi9C4' , category : 'design-reality'},
+        {type : 'image' , src : '17Pnw-UJp5MpHXgx-rJ8TjMJ7L6RXXWdr' , category : 'design-reality'},
+        {type : 'image' , src : '1q10SM9oVhDIaqKc4qBiUoS7ZmBkTKuA3' , category : 'design-reality'},
+        {type : 'image' , src : '19nYMe2yfjqcdDZVWR3T2f9jWEo2glSp6' , category : 'design-reality'},
+        {type : 'image' , src : '1a6wpKK4Dj3W5dk2YY9QV-guOUkxQtmSK' , category : 'design-reality'},
+        {type : 'image' , src : '1rYungQIJ4umYDjb4Jh6WXatdPpBeH9et' , category : 'design-reality'},
+        {type : 'image' , src : '1soKm131Aqq1X2-xbxoCrEknIL3Q5naMt' , category : 'design-reality'},
+        {type : 'image' , src : '11jHgw3go7U4hGpdOUPAtSx5H_4vppsbm' , category : 'design-reality'},
+
+
+
+
+
+        {type : 'video' , src : '14LiuhZUr1SbF4OAPYb4golOi0YwLjWEE' , category : 'video'},
 
 
 
