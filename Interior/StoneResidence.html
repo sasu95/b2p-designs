@@ -157,17 +157,31 @@
         })
         filterMedia('all');
       });
+      function normalizeText(text) {
+    return text.trim().toLowerCase().replace(/-/g, ' ',);
+}
+function filterMedia(category) {
+    const mediaItems = document.querySelectorAll('.media-item');
+    mediaItems.forEach(item => {
+        const itemCategory = normalizeText(item.getAttribute('data-category'));
+        const normalizedCategory = normalizeText(category);
 
-      function filterMedia(category){
-        const mediaItems = document.querySelectorAll('.media-item');
-        mediaItems.forEach(item => {
-          if( category === 'all' || item.getAttribute('data-category') == category){
-            item.style.display= 'inline-block'; 
-          }else{
-            item.style.display= 'none'; 
-          }
-        });
-      }
+        if (normalizedCategory === 'all' || itemCategory === normalizedCategory) {
+            item.style.display = 'inline-block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    const buttons = document.querySelectorAll('.filter-button');
+    buttons.forEach(button => button.classList.remove('active'));
+    const activeButton = Array.from(buttons).find(button => 
+        normalizeText(button.innerText) === normalizeText(category)
+    );
+
+    if (activeButton) {
+        activeButton.classList.add('active');
+    }
+}
   </script>
   <script src="../JS/bootstrap.bundle.min.js"></script>
 </body>
