@@ -64,16 +64,36 @@
     </div><!-------- End Of Container --------->
   </section> <!-------- End Of Media --------->
   <script>
-  function filterMedia(category) {
-  const mediaItems = document.querySelectorAll('.media-item');
-  mediaItems.forEach(item => {
-      if (category === 'all' || item.getAttribute('data-category') === category) {
-          item.style.display = 'inline-block'; 
-      } else {
-          item.style.display = 'none'; 
-      }
+  function normalizeText(text) {
+    return text.trim().toLowerCase().replace(/-/g, ' ');
+}
+
+function filterMedia(category) {
+    const mediaItems = document.querySelectorAll('.media-item');
+    mediaItems.forEach(item => {
+        const itemCategory = normalizeText(item.getAttribute('data-category'));
+        const normalizedCategory = normalizeText(category);
+
+        if (normalizedCategory === 'all' || itemCategory === normalizedCategory) {
+            item.style.display = 'inline-block';
+        } else {
+            item.style.display = 'none';
+        }
     });
+
+    const buttons = document.querySelectorAll('.filter-button');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    const activeButton = Array.from(buttons).find(button => 
+        normalizeText(button.innerText) === normalizeText(category)
+    );
+
+    if (activeButton) {
+        activeButton.classList.add('active');
     }
+}
+
+
     document.addEventListener("DOMContentLoaded", function(){
     // Array of media files with categories
     const mediaFiles = [
@@ -154,24 +174,7 @@
     });
       filterMedia('all');
   });
-  // Intersection Observer لتحميل الفيديوهات عند الحاجة
-  const videos = document.querySelectorAll('video');
-  const videoObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          const video = entry.target;
-          const source = video.querySelector('source');
-          source.src = video.getAttribute('data-src');
-          video.load(); 
-          observer.unobserve(video); 
-      }
-    });
-  }, { threshold: 0.25 });
   
-  videos.forEach(video => {
-      videoObserver.observe(video);
-  });
-
   </script>
   <script src="../JS/main.js"></script>
   <script src="../JS/bootstrap.bundle.min.js"></script>

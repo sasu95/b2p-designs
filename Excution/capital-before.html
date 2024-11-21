@@ -55,7 +55,7 @@
             <button class="filter-button" onclick="filterMedia('before')">before</button>
             <button class="filter-button" onclick="filterMedia('after')">after</button>
             <button class="filter-button" onclick="filterMedia('during')">during</button>
-            <button class="filter-button" onclick="filterMedia('design-reality')">design & reality</button>
+            <button class="filter-button" onclick="filterMedia('design reality')">design & reality</button>
             <button class="filter-button" onclick="filterMedia('video')">video</button>
         </div>
         <div class="mediaContainer">
@@ -63,16 +63,32 @@
     </div><!-------- End Of Container --------->
   </section> <!-------- End Of Media --------->
   <script>
-  function filterMedia(category) {
-  const mediaItems = document.querySelectorAll('.media-item');
-  mediaItems.forEach(item => {
-      if (category === 'all' || item.getAttribute('data-category') === category) {
-          item.style.display = 'inline-block'; 
-      } else {
-          item.style.display = 'none'; 
-      }
+function normalizeText(text) {
+    return text.trim().toLowerCase().replace(/-/g, ' ',);
+}
+function filterMedia(category) {
+    const mediaItems = document.querySelectorAll('.media-item');
+    mediaItems.forEach(item => {
+        const itemCategory = normalizeText(item.getAttribute('data-category'));
+        const normalizedCategory = normalizeText(category);
+
+        if (normalizedCategory === 'all' || itemCategory === normalizedCategory) {
+            item.style.display = 'inline-block';
+        } else {
+            item.style.display = 'none';
+        }
     });
+    const buttons = document.querySelectorAll('.filter-button');
+    buttons.forEach(button => button.classList.remove('active'));
+    const activeButton = Array.from(buttons).find(button => 
+        normalizeText(button.innerText) === normalizeText(category)
+    );
+
+    if (activeButton) {
+        activeButton.classList.add('active');
     }
+}
+
     document.addEventListener("DOMContentLoaded", function(){
     // Array of media files with categories
     const mediaFiles = [
@@ -145,19 +161,19 @@
         {type : 'image' , src : '1tqPDdLDNliFni8RHWvDlEbwwa5DuKlv_' , category : 'after'},
         {type : 'image' , src : '1m2QF5AGiULKIxkffBkKDlRrsuadlWdl8' , category : 'after'},
 
-        {type : 'image' , src : '1JDitdE1olHCk7-KPrabJmaIgaavliXug' , category : 'design-reality'},
-        {type : 'image' , src : '1ql2QyPN8KIGNRYKR62cIa6c3mbK62Wku' , category : 'design-reality'},
-        {type : 'image' , src : '1YxPjCBMAxDH_6d79Jc6IHuW2pC6hYq9I' , category : 'design-reality'},
-        {type : 'image' , src : '16gAAhhKQB6aXbiY-ziEDrf6BCW2jrSbU' , category : 'design-reality'},
-        {type : 'image' , src : '1vzFJIve4bGXCBjcQS8hxAwy1G6EZ2gjz' , category : 'design-reality'},
-        {type : 'image' , src : '1cxePtTr8QlYRkX2nmXfI-UvmUVepi9C4' , category : 'design-reality'},
-        {type : 'image' , src : '17Pnw-UJp5MpHXgx-rJ8TjMJ7L6RXXWdr' , category : 'design-reality'},
-        {type : 'image' , src : '1q10SM9oVhDIaqKc4qBiUoS7ZmBkTKuA3' , category : 'design-reality'},
-        {type : 'image' , src : '19nYMe2yfjqcdDZVWR3T2f9jWEo2glSp6' , category : 'design-reality'},
-        {type : 'image' , src : '1a6wpKK4Dj3W5dk2YY9QV-guOUkxQtmSK' , category : 'design-reality'},
-        {type : 'image' , src : '1rYungQIJ4umYDjb4Jh6WXatdPpBeH9et' , category : 'design-reality'},
-        {type : 'image' , src : '1soKm131Aqq1X2-xbxoCrEknIL3Q5naMt' , category : 'design-reality'},
-        {type : 'image' , src : '11jHgw3go7U4hGpdOUPAtSx5H_4vppsbm' , category : 'design-reality'},
+        {type : 'image' , src : '1JDitdE1olHCk7-KPrabJmaIgaavliXug' , category : 'design reality'},
+        {type : 'image' , src : '1ql2QyPN8KIGNRYKR62cIa6c3mbK62Wku' , category : 'design reality'},
+        {type : 'image' , src : '1YxPjCBMAxDH_6d79Jc6IHuW2pC6hYq9I' , category : 'design reality'},
+        {type : 'image' , src : '16gAAhhKQB6aXbiY-ziEDrf6BCW2jrSbU' , category : 'design reality'},
+        {type : 'image' , src : '1vzFJIve4bGXCBjcQS8hxAwy1G6EZ2gjz' , category : 'design reality'},
+        {type : 'image' , src : '1cxePtTr8QlYRkX2nmXfI-UvmUVepi9C4' , category : 'design reality'},
+        {type : 'image' , src : '17Pnw-UJp5MpHXgx-rJ8TjMJ7L6RXXWdr' , category : 'design reality'},
+        {type : 'image' , src : '1q10SM9oVhDIaqKc4qBiUoS7ZmBkTKuA3' , category : 'design reality'},
+        {type : 'image' , src : '19nYMe2yfjqcdDZVWR3T2f9jWEo2glSp6' , category : 'design reality'},
+        {type : 'image' , src : '1a6wpKK4Dj3W5dk2YY9QV-guOUkxQtmSK' , category : 'design reality'},
+        {type : 'image' , src : '1rYungQIJ4umYDjb4Jh6WXatdPpBeH9et' , category : 'design reality'},
+        {type : 'image' , src : '1soKm131Aqq1X2-xbxoCrEknIL3Q5naMt' , category : 'design reality'},
+        {type : 'image' , src : '11jHgw3go7U4hGpdOUPAtSx5H_4vppsbm' , category : 'design reality'},
         {type : 'image' , src : '1223VU4lUHpY4VC4wZtL7FfAPZHgIwbeY' , category : 'after'},
         {type : 'image' , src : '1uuJPHlWdQmUwllnxH_yOJrY8b_2D1_II' , category : 'after'},
         {type : 'image' , src : '1gfEugbcPYe-VscMY48scT2dYXf0kWTIl' , category : 'after'},
